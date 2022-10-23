@@ -1,0 +1,41 @@
+.map-controls {
+  padding: 12px;
+  position: absolute;
+  width: 320px;
+  top: 0;
+  transition: transform 0.3s ease;
+
+  &__city-select,
+  &__street,
+  &__building,
+  &__find {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+
+    @media screen and (max-width: 425px) {
+      max-width: 100%;
+    }
+  }
+
+  &__hide {
+    display: none;
+
+    @media screen and (max-width: 425px) {
+      display: inline-block;
+    }
+  }
+
+  &_hide {
+    transform: translateY(-200px);
+  }
+
+  &_show {
+    transform: translateY(0);
+  }
+
+  @media screen and (max-width: 425px) {
+    width: 100%;
+  }
+}
